@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Invoice Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Invoice Generator</h1>
+        <form id="invoice-form">
+            <div class="form-group">
+                <label for="client-name">Client Name:</label>
+                <input type="text" id="client-name" required>
+            </div>
+            <div class="form-group">
+                <label for="client-email">Client Email:</label>
+                <input type="email" id="client-email" required>
+            </div>
+            <div id="items">
+                <div class="item">
+                    <input type="text" placeholder="Item Description" class="item-desc" required>
+                    <input type="number" placeholder="Quantity" class="item-qty" required>
+                    <input type="number" placeholder="Price" class="item-price" required>
+                    <button type="button" class="remove-item">Remove</button>
+                </div>
+            </div>
+            <button type="button" id="add-item">Add Item</button>
+            <div class="form-group">
+                <label for="total">Total:</label>
+                <span id="total">0</span>
+            </div>
+            <button type="button" id="generate-pdf">Generate PDF</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
